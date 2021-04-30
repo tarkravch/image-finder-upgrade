@@ -1,5 +1,6 @@
 import './styles.css';
 import './apiService';
+import 'lazysizes';
 
 import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/mobile/dist/PNotifyMobile.css';
@@ -8,12 +9,13 @@ import { alert, error, success, defaultModules } from '@pnotify/core/dist/PNotif
 import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js';
 
 import * as basicLightbox from 'basiclightbox';
-
 import showLargeImg from './modalImage';
+
+import largePicURL from './renderGallery';
 
 import renderGallery from './renderGallery';
 import { refs } from './refs';
-import clickedImage from './modalImage';
+// import clickedImage from './modalImage';
 import imageCard from './templates/image-card.hbs';
 import ApiService from './apiService';
 import API_KEY from './apiService';
@@ -25,6 +27,8 @@ import noticeSuccess from './renderGallery';
 refs.inputForm.addEventListener('submit', onSearch);
 refs.loadMoreBtn.addEventListener('click', loadMore);
 refs.loadMoreBtn.setAttribute('hidden', true);
+
+
 
 
 const apiRequest = new ApiService();
@@ -48,10 +52,9 @@ function onSearch(event) {
                 return error({ text: 'Not found! Please try more specific query.', delay: 3000 });
             } else {
                 refs.loadMoreBtn.removeAttribute('hidden');
+
                 return success({ text: 'Gallery has been built successfully!', delay: 2000 });
             }
-
-
         })
         .catch(() => {
             return error({ text: 'Not found! Please try more specific query.', delay: 3000 });
@@ -66,5 +69,4 @@ function loadMore() {
 
     apiRequest.fetchImages(searchValue, options)
         .then(renderGallery);
-
 }

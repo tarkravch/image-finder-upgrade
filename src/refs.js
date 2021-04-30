@@ -3,7 +3,5 @@ export const refs = {
     inputForm: document.querySelector('.search-form'),
     gallery: document.querySelector('.gallery'),
     loadMoreBtn: document.querySelector('[data-action="load-more"]'),
-
-    // clickedImage: document.querySelector('.image')
-
+    renderedImage: document.querySelector('.image')
 }

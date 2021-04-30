@@ -12,7 +12,7 @@ import '@pnotify/core/dist/BrightTheme.css';
 import { alert, error, success, defaultModules } from '@pnotify/core/dist/PNotify.js';
 import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js';
 
-const MAIN_URL = 'https://pixabay.com/api/?image_type=photo&orientation=horizontal';
+export const MAIN_URL = 'https://pixabay.com/api/?image_type=photo&orientation=horizontal';
 export const API_KEY = '21265034-f349ebe085002257868a3d8ee';
 export const options = {
     headers: {
@@ -28,11 +28,11 @@ export default class ApiService {
     fetchImages() {
         return fetch(`${MAIN_URL}&q=${this.searchQuery}&page=${this.pageNumber}&per_page=12&key=${API_KEY}`)
             .then(response => {
-                console.log(response);
+
                 return response.json();
             })
             .then((foundImages) => {
-                console.log(foundImages);
+
                 this.incrementPage();
                 return foundImages;
             })

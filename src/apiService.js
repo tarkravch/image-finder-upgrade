@@ -3,8 +3,6 @@ import './styles.css';
 
 import { refs } from './refs';
 import { renderGallery } from './renderGallery';
-import clickedImage from './modalImage';
-import showLargeImg from './modalImage';
 
 import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/mobile/dist/PNotifyMobile.css';

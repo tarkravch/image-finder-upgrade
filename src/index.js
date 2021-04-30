@@ -9,13 +9,13 @@ import { alert, error, success, defaultModules } from '@pnotify/core/dist/PNotif
 import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js';
 
 import * as basicLightbox from 'basiclightbox';
-import showLargeImg from './modalImage';
+
 
 import largePicURL from './renderGallery';
 
 import renderGallery from './renderGallery';
 import { refs } from './refs';
-// import clickedImage from './modalImage';
+
 import imageCard from './templates/image-card.hbs';
 import ApiService from './apiService';
 import API_KEY from './apiService';

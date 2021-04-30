@@ -1,0 +1,80 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    /*
+   * CSS image reference example.
+   */
+    min-height: 100vh;
+    margin: 0;
+    display: block;
+    padding: 20px;
+}
+
+.search-form {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.photo-card {
+    list-style: none;
+    display: block;
+    width: calc((100%-30px) / 3);
+    margin-bottom: 30px;
+}
+
+.image {
+    display: inline-block;
+    margin: 0 0 10px 0;
+    max-width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+}
+
+.stats-item {
+    display: flex;
+    align-items: center;
+    margin: 0 5px 0 0;
+}
+
+.material-icons {
+    display: block;
+    margin-right: 5px;
+}
+
+.btn {
+    position: fixed;
+    right: 0;
+    top: 30%;
+    height: 97px;
+    width: 97px;
+    border: tomato;
+    border-radius: 50%;
+    background-color: tomato;
+    cursor: pointer;
+}
+
+.label {
+    color: teal;
+    font-size: 18px;
+}
